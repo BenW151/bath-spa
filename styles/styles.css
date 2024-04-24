@@ -371,7 +371,9 @@ header {
   height: 180lvh;
 }
 
-header, header a, header a .lucide {
+header,
+header a,
+header a .lucide {
   color: var(--color-white);
 }
 
@@ -1049,7 +1051,8 @@ form label:nth-child(4) {
   left: 0;
 }
 
-.image-text-overlay .text-wrapper, .image-text-overlay .text-wrapper a.link {
+.image-text-overlay .text-wrapper,
+.image-text-overlay .text-wrapper a.link {
   color: var(--color-white);
 }
 
@@ -1192,7 +1195,7 @@ form label:nth-child(4) {
   #image-strip {
     display: none;
   }
-  
+
   #treatments .item.paragraph-with-title {
     grid-column: 1 / 7;
     grid-row: auto;
@@ -1264,6 +1267,7 @@ form label:nth-child(4) {
     height: 100lvh;
     padding-top: 15vh;
     padding-bottom: 3vh;
+    justify-content: flex-start;
     background: var(--background-primary);
     z-index: -1;
     transform: translateY(-100lvh);
@@ -1272,7 +1276,9 @@ form label:nth-child(4) {
 
   .nav-item {
     font-size: var(--font-size-XL);
+    font-weight: 500;
     font-family: var(--font-family-primary);
+    color: var(--color-black);
     transition: transform 0.5s ease-in-out;
     display: flex;
     margin: 0;
@@ -1311,8 +1317,13 @@ form label:nth-child(4) {
 
   nav .contact {
     display: flex;
-    margin-top: var(--spacing-5);
+    margin-top: auto;
     margin-left: 50vw;
+  }
+
+  nav .contact a {
+    color: var(--color-black);
+    font-size: var(--font-size-XS);
   }
 
   .burger-menu {
