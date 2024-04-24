@@ -235,7 +235,7 @@ section {
   justify-content: center;
   margin: 0 auto;
   background-color: var(--accent-secondary);
-  z-index: 2;
+  z-index: 3;
 }
 
 .grid {
@@ -432,7 +432,7 @@ header .item:nth-child(3) {
 
 footer {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   transition: none;
   transform: translateY(-12rem);
 }
