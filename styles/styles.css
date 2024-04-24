@@ -1122,8 +1122,9 @@ form label:nth-child(4) {
 
   /** Grid Positioning */
 
-  section .item {
-    grid-column: 1 / 7;
+  section .accent {
+    grid-column: 1;
+    margin: auto;
   }
 
   #lead-text .text-reveal {
@@ -1131,9 +1132,28 @@ form label:nth-child(4) {
     grid-row-start: 2;
   }
 
-  #about .paragraph-with-title:nth-of-type(1) {
+  #about .item.paragraph-with-title {
     grid-column: 1 / 7;
-    grid-row-start: 2;
+    grid-row: auto;
+  }
+
+  #about .item.image {
+    grid-column: 1 / 7;
+    grid-row: auto;
+    height: 30vh;
+    margin: 0;
+  }
+
+  #facilities .item.paragraph-with-title {
+    grid-column: 1 / 7;
+    grid-row: auto;
+  }
+
+  #facilities .item.image {
+    grid-column: 1 / 7;
+    grid-row: auto;
+    height: 30vh;
+    margin: 0;
   }
 
   #contact-form .paragraph-with-title {
@@ -1156,6 +1176,10 @@ form label:nth-child(4) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 2.3333333333vw;
+  }
+
+  .paragraph-with-title .item-inner {
+    padding: var(--spacing-1);
   }
 
   /** Logo */
