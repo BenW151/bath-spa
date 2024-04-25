@@ -148,7 +148,7 @@ p {
 #facilities .image:nth-of-type(2) {
   grid-column: 3 / 10;
   grid-row: 1;
-  height: 40vw;
+  height: 45vw;
 }
 
 #facilities .image:nth-of-type(3) {
@@ -181,18 +181,18 @@ p {
   grid-row: 1;
 }
 
-#image-strip .container {
+.image-strip.container {
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
 
-#image-strip .image {
+.image-strip .image {
   height: 80vh;
   overflow: hidden;
 }
 
-#image-strip img {
+.image-strip img {
   position: absolute;
   height: 120vh;
   width: 100%;
@@ -407,6 +407,7 @@ header a.link::after {
 .hero-text {
   grid-column: 1 / 15;
   grid-row-start: 1;
+  margin-top: 10vh;
 }
 
 .hero-text h2 {
@@ -1394,13 +1395,13 @@ form label:nth-child(4) {
   /** Header */
 
   header {
-    height: 120lvh;
+    height: 150lvh;
   }
 
   .hero-text {
     grid-column: span 6;
     grid-row-start: 1;
-    margin-top: 45%;
+    margin-top: 25vh;
   }
 
   header .item:nth-child(2) {
