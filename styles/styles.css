@@ -176,9 +176,29 @@ p {
   height: 25vw;
 }
 
-#contact-form .paragraph-with-title {
-  grid-column: 3 / 10;
+#information .paragraph-with-title:nth-of-type(1) {
+  grid-column: 3 / 11;
   grid-row: 1;
+}
+
+#information .image:nth-of-type(2) {
+  grid-column: 9 / 16;
+  grid-row: 1;
+  height: 40vw;
+}
+
+#information .accordion:nth-of-type(3) {
+  grid-column: 6 / 17;
+  grid-row: 2;
+  background-color: var(--color-white);
+  height: 40vw;
+}
+
+#information .image:nth-of-type(4) {
+  grid-column: 1 / 6;
+  grid-row: 2;
+  height: 30vw;
+  z-index: -1;
 }
 
 .image-strip.container {
@@ -401,7 +421,7 @@ header a.link::after {
   top: 0;
   bottom: 0;
   right: 0;
-  filter: brightness(0.8);
+  filter: brightness(0.6);
 }
 
 .hero-text {
@@ -528,8 +548,8 @@ footer .card img {
   z-index: 5;
 }
 
-.paragraph-with-title .item-inner {
-  padding: var(--spacing-4);
+.item-inner {
+  margin: var(--spacing-4);
 }
 
 .paragraph {
@@ -790,7 +810,6 @@ li {
 
 .accordion {
   grid-column: span 8;
-  border-top: 1px solid grey;
 }
 
 .accordion-item {
@@ -799,12 +818,12 @@ li {
 
 .accordion-title {
   font-family: var(--font-family-primary);
+  font-size: var(--font-size-S);
   display: flex;
   align-items: center;
   cursor: pointer;
   margin-top: var(--spacing-3);
   margin-bottom: var(--spacing-3);
-  font-size: var(--font-size-S);
 }
 
 .accordion-title svg {
@@ -1201,11 +1220,6 @@ form label:nth-child(4) {
     margin: 0;
   }
 
-  #contact-form .paragraph-with-title {
-    grid-column: 1 / 7;
-    grid-row: 2;
-  }
-
   #image-strip {
     display: none;
   }
@@ -1234,6 +1248,26 @@ form label:nth-child(4) {
     margin: 0;
   }
 
+  #information .item.paragraph-with-title, #information .item.accordion {
+    grid-column: 1 / 7;
+    grid-row: auto;
+  }
+
+  #information .item.image {
+    grid-column: 1 / 7;
+    grid-row: auto;
+    height: 20vh;
+    margin: 0;
+  }
+
+  #information .item.accordion {
+    height: 100vw;
+  }
+
+  #information .item.image:nth-of-type(4) {
+    display: none;
+  }
+
   /** Main Formatting */
 
   .container {
@@ -1245,10 +1279,6 @@ form label:nth-child(4) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 2.3333333333vw;
-  }
-
-  .paragraph-with-title .item-inner {
-    padding: var(--spacing-1);
   }
 
   /** Logo */
