@@ -972,8 +972,6 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  --gap-size: 8px;
-  column-gap: var(--gap-size);
 }
 
 .reveal-mask {
@@ -986,7 +984,14 @@ li {
   display: inline-block;
   transform: translateY(100%);
   animation: none;
+  white-space: pre;
   opacity: 0;
+}
+
+.line-container {
+  height: auto;  
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /** Forms */
@@ -1121,7 +1126,7 @@ form label:nth-child(4) {
     --spacing-3: 4.6vw;
     --spacing-4: 5vw;
     --spacing-5: 7vw;
-    --font-size-XXL: 14vw;
+    --font-size-XXL: 13vw;
     --font-size-XL: 12vw;
     --font-size-L: 6vw;
     --font-size-M: 5vw;

@@ -213,27 +213,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function prepareText(container) {
-    const phrase = container.textContent.trim();
-    container.textContent = ""; // Clear the container
-    const words = phrase.split(/\s+/); // Split phrase into words at one or more whitespace
-    const fontSize = window.getComputedStyle(container).fontSize;
-    const gapSize = parseFloat(fontSize) / 6; // Calculate gap size based on font size
+    const htmlContent = container.innerHTML;
+    container.innerHTML = ''; // Clear the container for reformatting
 
-    container.style.setProperty("--gap-size", `${gapSize}px`); // Set the gap size
+    const parts = htmlContent.split(/<br\s*\/?>/i);
+    parts.forEach((part, partIndex) => {
+        // Create a new line-container for each part, whether it ends with <br> or not
+        const lineContainer = document.createElement('div');
+        lineContainer.className = 'line-container';
 
-    words.forEach((word) => {
-      let wordContainer = document.createElement("div");
-      wordContainer.classList.add("reveal-mask");
-      wordContainer.style.overflow = "hidden"; // Hide overflow to control visibility
+        // Split the part into words and add them to the line-container
+        const words = part.trim().split(/\s+/);
+        words.forEach((word, index) => {
+            let wordContainer = document.createElement('div');
+            wordContainer.classList.add('reveal-mask');
+            wordContainer.style.overflow = 'hidden';
 
-      let wordSpan = document.createElement("span");
-      wordSpan.classList.add("word");
-      wordSpan.textContent = word + " ";
+            let wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.textContent = word + (index < words.length - 1 ? ' ' : ''); // Add space if it's not the last word
+            wordContainer.appendChild(wordSpan);
+            lineContainer.appendChild(wordContainer);
+        });
 
-      wordContainer.appendChild(wordSpan);
-      container.appendChild(wordContainer);
+        // Append the constructed line-container to the main container
+        container.appendChild(lineContainer);
+
+        // Add a manual <br> element if needed (except after the last part)
+        if (partIndex < parts.length - 1) {
+            container.appendChild(document.createElement('br'));
+        }
     });
-  }
+}
+
+
+
+
 
   function animateText(container) {
     const wordSpans = container.querySelectorAll(".word");
