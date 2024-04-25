@@ -481,10 +481,18 @@ footer .list.contact {
   margin-top: auto;
 }
 
-footer .list.other-links {
+footer .card {
   grid-column: 1 / 4;
-  grid-row-start: 2;
-  margin-top: auto;
+  grid-row-start: 1;
+}
+
+footer .card h4 {
+  margin-bottom: var(--spacing-1);
+}
+
+footer .card img {
+  width: 6vw;
+  height: 6vw;
 }
 
 .footer-end .item:nth-child(1) {
@@ -569,8 +577,8 @@ footer .list.other-links {
 }
 
 .card img {
-  width: 5vw;
-  height: 5vw;
+  width: 6vw;
+  height: 6vw;
   overflow: visible;
   margin-right: var(--spacing-2);
 }
@@ -1406,17 +1414,12 @@ form label:nth-child(4) {
 
   footer .list.socials {
     grid-column: 5 / 7;
-    grid-row-start: 3;
+    grid-row-start: 2;
   }
 
   footer .list.contact {
     grid-column: 5 / 7;
     grid-row-start: 2;
-  }
-
-  footer .list.other-links {
-    grid-column: 1 / 3;
-    grid-row-start: 3;
   }
 
   .footer-end .item {
