@@ -463,14 +463,19 @@ header a.link::after {
 }
 
 .hero-text {
-  grid-column: 1 / 15;
+  grid-column: 1 / 17;
   grid-row-start: 1;
-  margin-top: 10vh;
+  margin-top: 2vw;
+}
+
+.hero-text .text-reveal {
+  justify-content: center;
 }
 
 .hero-text h2 {
   font-size: var(--font-size-M);
   font-style: italic;
+  margin-top: var(--spacing-1);
 }
 
 header .container {
@@ -538,6 +543,10 @@ footer .list.contact {
   grid-column: 14 /17;
   grid-row-start: 2;
   margin-top: auto;
+}
+
+footer .address {
+  grid-column: 1 / 3;
 }
 
 footer .card {
@@ -966,10 +975,10 @@ li {
 
 .section-label {
   font-size: var(--font-size-XXS);
+  font-family: var(--font-family-primary);
   grid-column: 1 / 3;
   margin-left: auto;
   height: fit-content;
-  font-family: var(--font-family-primary);
 }
 
 .progress-bar {
@@ -1182,7 +1191,7 @@ form label:nth-child(4) {
     --spacing-3: 4.6vw;
     --spacing-4: 5vw;
     --spacing-5: 7vw;
-    --font-size-XXL: 13vw;
+    --font-size-XXL: 18vw;
     --font-size-XL: 12vw;
     --font-size-L: 6vw;
     --font-size-M: 5vw;
@@ -1334,7 +1343,6 @@ form label:nth-child(4) {
   /** Logo */
 
   .wordmark {
-    color: var(--accent-primary);
     margin-left: 0;
     margin-top: var(--spacing-1);
     margin-bottom: var(--spacing-1);
