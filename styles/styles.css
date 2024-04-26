@@ -29,7 +29,7 @@ body {
   --background-opacity: rgba(0, 0, 0, 0.1);
   --font-family-primary: "Lora", serif;
   --font-family-secondary: "Roboto Flex", sans-serif;
-  --font-size-XXL: 12vw;
+  --font-size-XXL: 9vw;
   --font-size-XL: 8vw;
   --font-size-L: 6vw;
   --font-size-M: 3vw;
@@ -465,10 +465,10 @@ header a.link::after {
 .hero-text {
   grid-column: 1 / 17;
   grid-row-start: 1;
-  margin-top: 2vw;
+  margin-top: 10vw;
 }
 
-.hero-text .text-reveal {
+.hero-text .text-reveal, .hero-text .line-container {
   justify-content: center;
 }
 
@@ -643,7 +643,7 @@ footer .card h4 {
 .card img {
   width: 6vw;
   height: 6vw;
-  overflow: visible;
+  overflow: inherit;
   margin-right: var(--spacing-2);
 }
 
@@ -698,7 +698,6 @@ button.link {
   flex-direction: row;
   grid-column: span 3;
   white-space: nowrap;
-  overflow: visible;
   margin: 0;
   margin-top: auto;
   margin-bottom: var(--spacing-1);
@@ -1523,6 +1522,11 @@ form label:nth-child(4) {
   footer .list.contact {
     grid-column: 5 / 7;
     grid-row-start: 2;
+  }
+
+  footer .address {
+    grid-column: 1 / 7;
+    grid-row-start: 3;
   }
 
   .footer-end .item {
