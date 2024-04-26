@@ -1270,7 +1270,7 @@ form label:nth-child(4) {
     margin: 0;
   }
 
-  #image-strip {
+  .image-strip {
     display: none;
   }
 
