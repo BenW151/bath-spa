@@ -26,7 +26,7 @@ body {
   --background-primary: #1d1d1c;
   --background-secondary: #f2f3f4;
   --background-opacity: rgba(0, 0, 0, 0.1);
-  --font-family-primary: "Lora", sans-serif;
+  --font-family-primary: "Lora", serif;
   --font-family-secondary: "Roboto Flex", sans-serif;
   --font-size-XXL: 12vw;
   --font-size-XL: 8vw;
@@ -1063,7 +1063,7 @@ li {
 }
 
 .line-container {
-  height: auto;  
+  height: auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1302,7 +1302,8 @@ form label:nth-child(4) {
     margin: 0;
   }
 
-  #information .item.paragraph-with-title, #information .item.accordion {
+  #information .item.paragraph-with-title,
+  #information .item.accordion {
     grid-column: 1 / 7;
     grid-row: auto;
   }
@@ -1320,6 +1321,19 @@ form label:nth-child(4) {
 
   #information .item.image:nth-of-type(4) {
     display: none;
+  }
+
+  #packages .item.paragraph-with-title {
+    grid-column: 1 / 7;
+    grid-row: auto;
+    margin-top: 5vh;
+  }
+
+  #packages .item.image {
+    grid-column: 1 / 7;
+    grid-row: auto;
+    height: 30vh;
+    margin: 0;
   }
 
   /** Main Formatting */
